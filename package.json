@@ -1,0 +1,25 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rerimoi/DAS.git"
+  },
+  "author": "Paula Rerimoi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rerimoi/DAS/issues"
+  },
+  "homepage": "https://github.com/Rerimoi/DAS#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
