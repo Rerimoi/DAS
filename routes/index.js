@@ -7,7 +7,7 @@ router.get('/login', function(req,res){resc.render('login', {title: 'Login page'
 // router.get('/login/student', function(req,res){res.render('index', {title: 'Login student page'})})
 // router.get('/signup/lecturer', function(req,res){res.render('index', {title: 'Signup lecturer page'})})
 // router.get('/singup/student', function(req,res){res.render('index', {title: 'Login student page'})})
-// router.get('/lecturer', function(req,res){res.render('index', {title: 'Welcome Lecturer'})})
+router.get('/lecturer', function(req,res){res.render('index', {title: 'Welcome Lecturer'})})
 router.get('/student', function(req,res){res.render('index', {title: 'Welcome student'})})
 
 module.exports = router
