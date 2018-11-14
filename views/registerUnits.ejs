@@ -1,0 +1,29 @@
+<% include partials/header %>
+<% include partials/navigation %>
+
+
+    <div>
+        <select name="year">
+            <option value="" selected disabled hidden>Year</option>
+            <option value="Year 1">Year 1</option>
+            <option value="Year 2">Year 2</option>
+            <option value="Year 3">Year 3</option>
+            <option value="Year 4">Year 4</option>
+        </select>
+    </div>
+    <div>
+        <select><option value="" selected disabled hidden>Semister</option>
+            <option value="Semister 1">Semister 1</option>
+            <option value="Semister 2">Semister 2</option>
+          </select>
+    </div>
+    
+    <FORM:post>
+    <!-- <div>
+        //list from db
+    </div> -->
+    <button value="Submit">SUBMIT</button>
+    </FORM:post>
+
+
+<% include partials/footer %>
