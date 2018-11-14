@@ -44,6 +44,11 @@ p > span {
     font-size: 9px;
 }
 
+img {
+    padding: 30px 20px 0 20px;
+
+}
+
 h3 {
     font-family: 'Dosis';
     font-size: 35px;
