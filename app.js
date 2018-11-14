@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const bootstrap = require('bootstrap')
 
 const routes = require('./routes/index')
 
@@ -22,6 +21,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Check ./routes/index.js to get a list of all implemented routes
 app.use('/', routes)
 
-app.listen(3000, function(){
-    console.log('listening to port 3000')
-});
+app.listen(5000, function(){
+    console.log('listening to port 5000')
+})
