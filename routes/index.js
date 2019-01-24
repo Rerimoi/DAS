@@ -20,5 +20,7 @@ router.get('/lecturer/class', function(req,res){res.render('class', {title: 'Cla
 
 // student's route
 router.get('/student', function(req,res){res.render('index', {title: 'Welcome student'})})
+router.get('/student', function(req,res){res.render('index', {title: 'student'})})
+
 
 module.exports = router

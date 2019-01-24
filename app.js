@@ -11,6 +11,7 @@ const routes = require('./routes/index')
 
 
 const app = express();
+let port=5000;
 
 //view engine
 app.set('view engine','ejs')
@@ -29,8 +30,13 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', routes)
 
 app.listen(5000, function(){
+<<<<<<< HEAD
     console.log('listening to port 5000')
 });
 
 })
 
+=======
+    console.log('listening to port + port 5000')
+});
+>>>>>>> edits
