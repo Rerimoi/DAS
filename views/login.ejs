@@ -1,21 +1,27 @@
 <% include partials/header%>
 <head>
-     <link rel="stylesheet" href="./stylesheet/sign.css">
+     <link rel="stylesheet" href="/stylesheet/sign.css">
     <link rel="stylesheet" href="./stylesheet/bootstrap.min.css">
     <script src="./scripts/signin.js"></script>
      <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>   -->
 </head>
 
-    <title> <%= title %>> </title>
+    <title> <%= title %> </title>
     <div class="container-fluid">
-   <div> <form class="signIn">
-        <h3>Welcome</br>Back !</h3>
+   <div class="main2"> <form class="signIn" action="" method="POST">
+         <ul class="tab-group">
+        <li class="tab active"><a href="/account">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+         <img src="./images/avatar.png" alt="Avatar" class="avatar">
+       <p><h3>Welcome</br>Back !</h3></p>
         
-        <input type="email" class="emailbox2" placeholder="Insert eMail" autocomplete='off' required />
-        <input type="password" placeholder="Insert Password" required />
+       <p><input type="email" class="emailbox2" placeholder="Insert eMail" autocomplete='off' required /></p>
+       <p><input type="password" placeholder="Insert Password" required /></p>
     
-        <button class="form-btn sx back" type="button">Back</button>
-        <button class="form-btn dx" type="submit">Log In</button>
+        <button class="btn btn-outline-success" type="button">Back</button>
+        <button class="btn btn-outline-success" type="submit">Log In</button>
+        <p><a href="">Forgot password?</a></p>
     </form></div>
     </div>
 
