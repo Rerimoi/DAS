@@ -1,50 +1,41 @@
 <% include partials/header %>
 <% include partials/navigation %>
 
-    <button type="button" class="btn btn-lg btn-outline-secondary">
-        Start-Class
-    </button>
-    <form role="form">
-        <div class="form-group">
-            
-            <label for="exampleInputEmail1">
-                date
-            </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" />
+    <!-- <div class="dropdown">                
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+            Unit
+        </button>
+        <div class="unitDropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item disabled" href="#">unit1</a> <a class="dropdown-item" href="#">unit2</a> <a class="dropdown-item" href="#">unit3</a>
         </div>
-        <div class="form-group">
-            
-            <label for="exampleInputPassword1">
-                time
+    </div> -->
+    <select onclick="view.displayUnits">
+            <option value="null"></option>
+
+            <option value="unit">unit</option>
+            <!-- <option value="unit2">unit2</option>
+            <option value="unit3">unit3</option> -->
+
+
+
+    </select>
+    
+    <div>
+        <button onclick="handlers.startClass()" type="button" class="btn btn-lg btn-outline-secondary">
+            Start-Class
+        </button>
+        <button onclick="handlers.endClass()" type="button" class="btn btn-lg btn-outline-secondary">
+            End-Class
+        </button>
+    </div>
+
+    <form role="form">       
+        <div class="form-group">       
+            <label for="numberOfStudents">
+                No. of Students
             </label>
             <input type="password" class="form-control" id="exampleInputPassword1" />
         </div>
-        <div class="form-group">
-            
-                <label for="exampleInputPassword1">
-                    No. of Students
-                </label>
-                <input type="password" class="form-control" id="exampleInputPassword1" />
-            </div>
-        <div class="form-group">
-            
-            <label for="exampleInputFile">
-                File input
-            </label>
-            <input type="file" class="form-control-file" id="exampleInputFile" />
-            <p class="help-block">
-                Example block-level help text here.
-            </p>
-        </div>
-        <div class="checkbox">
-            
-            <label>
-                <input type="checkbox" /> Check me out
-            </label>
-        </div> 
-        <button type="submit" class="btn btn-primary">
-            Submit
-        </button>
     </form>
 
 <% include partials/footer %>
