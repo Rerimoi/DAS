@@ -1,33 +1,28 @@
 <% include partials/header%>
 <head>
-    <link rel="stylesheet" href="./stylesheet/style.css">
-        <!-- <script src="./scripts/login.js"></script> -->
-        <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> --> 
+     <link rel="stylesheet" href="/stylesheet/sign.css">
+    <link rel="stylesheet" href="./stylesheet/bootstrap.min.css">
+    <script src="./scripts/signin.js"></script>
+     <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>   -->
 </head>
 
-    <title> <%= title %>> </title>
-
+    <title> <%= title %> </title>
     <div class="container-fluid">
-    <form class="signUp">
-        <img src="./images/avatar.png" alt="Avatar" class="avatar">
-        <h3>Create Your Account</h3>
-        <p>Enter your email address</br>and your password for join.
-        </p>
-        <input class="w100" type="email" placeholder="Insert eMail" reqired autocomplete='off' />
-        <input type="password" placeholder="Insert Password" reqired />
-        <input type="password" placeholder="Verify Password" reqired />
-        <button class="form-btn sx log-in" type="button">Log In</button>
-        <button class="form-btn dx" type="submit">Sign Up</button>
-    </form>
-    <form class="signIn">
-        <h3>Welcome</br>Back !</h3>
+   <div class="main2"> <form class="signIn" action="" method="POST">
+         <ul class="tab-group">
+        <li class="tab active"><a href="/account">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+         <img src="./images/avatar.png" alt="Avatar" class="avatar">
+       <p><h3>Welcome</br>Back !</h3></p>
         
-        <input type="email" placeholder="Insert eMail" autocomplete='off' reqired />
-        <input type="password" placeholder="Insert Password" reqired />
-        <button class="form-btn sx back" type="button">Back</button>
-        <button class="form-btn dx" type="submit">Log In</button>
-    </form>
-</div>
+       <p><input type="email" class="emailbox2" placeholder="Insert eMail" autocomplete='off' required /></p>
+       <p><input type="password" placeholder="Insert Password" required /></p>
+    
+        <button class="btn btn-outline-success" type="button">Back</button>
+        <button class="btn btn-outline-success" type="submit">Log In</button>
+        <p><a href="">Forgot password?</a></p>
+    </form></div>
+    </div>
 
-<%include partials/footer%>
-
+    <%include partials/footer%>

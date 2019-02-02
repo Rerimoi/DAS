@@ -15,7 +15,8 @@ router.get('/account', function(req,res){res.render('account', {title: 'Login pa
 
 // lecturers routes
 router.get('/lecturer', function(req,res){res.render('lecturerHome', {title: 'Welcome Lecturer'})})
-router.get('/lecturer/register-units', function(req,res){res.render('registerUnits', {title: 'Units'})})
+router.get('/lecturer/class', function(req,res){res.render('class', {title: 'Welcome To a Class'})})
+router.get('/lecturer/register-units', function(req,res){res.render('cla', {title: 'Units'})})
 
 router.get('/session', function(req,res){res.render('session', {title: 'Class'})})
 
