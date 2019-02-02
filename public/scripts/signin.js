@@ -1,23 +1,23 @@
-//signup function
+// //signup function
 
-window .onload = function () {
-    document.getElementById("password1").onchange = validatePassword;
-    document.getElementById("passsword2").onchange = validatePassword;
-}
+// window .onload = function () {
+//     document.getElementById("password1").onchange = validatePassword;
+//     document.getElementById("passsword2").onchange = validatePassword;
+// }
 
-function validatePassword() {   
-    var pass2=document.getElementById("password2").value;
-    var pass1=document.getElementById("password1").value;
+// function validatePassword() {   
+//     var pass2=document.getElementById("password2").value;
+//     var pass1=document.getElementById("password1").value;
 
-    if (pass1!=pass2) {
-        document.getElementById("password2").setCustomValidity("Passwords don't match");
+//     if (pass1!=pass2) {
+//         document.getElementById("password2").setCustomValidity("Passwords don't match");
 
-    } else {
-        document.getElementById("password2").setCustomValidity('');
-        // empty string means no validation error
-    }
+//     } else {
+//         document.getElementById("password2").setCustomValidity('');
+//         // empty string means no validation error
+//     }
 
-}
+// }
 
 // login function
 // function login()

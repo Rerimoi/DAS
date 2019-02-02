@@ -1,12 +1,41 @@
 <% include partials/header %>
 <% include partials/navigation %>
 
+    <!-- <div class="dropdown">                
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+            Unit
+        </button>
+        <div class="unitDropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item disabled" href="#">unit1</a> <a class="dropdown-item" href="#">unit2</a> <a class="dropdown-item" href="#">unit3</a>
+        </div>
+    </div> -->
+    <select onclick="view.displayUnits">
+            <option value="null"></option>
+
+            <option value="unit">unit</option>
+            <!-- <option value="unit2">unit2</option>
+            <option value="unit3">unit3</option> -->
+
+
+
+    </select>
+    
     <div>
-        <select>
-            <!-- from database -->
-        </select>
-        <button type="button" onclick="location.href='/lecturer/class/start';" value="Go to class session">START</button>
-        <button type="button" onclick="location.href='/lecturer/class/report';" value="Go to report as per class">REPORT</button>
+        <button onclick="handlers.startClass()" type="button" class="btn btn-lg btn-outline-secondary">
+            Start-Class
+        </button>
+        <button onclick="handlers.endClass()" type="button" class="btn btn-lg btn-outline-secondary">
+            End-Class
+        </button>
     </div>
+
+    <form role="form">       
+        <div class="form-group">       
+            <label for="numberOfStudents">
+                No. of Students
+            </label>
+            <input type="password" class="form-control" id="exampleInputPassword1" />
+        </div>
+    </form>
 
 <% include partials/footer %>

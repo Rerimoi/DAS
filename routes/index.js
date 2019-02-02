@@ -15,15 +15,37 @@ router.get('/account', function(req,res){res.render('account', {title: 'Login pa
 
 // lecturers routes
 router.get('/lecturer', function(req,res){res.render('lecturerHome', {title: 'Welcome Lecturer'})})
-router.get('/lecturer/register-units', function(req,res){res.render('registerUnits', {title: 'Units'})})
+router.get('/lecturer/class', function(req,res){res.render('class', {title: 'Welcome To a Class'})})
+router.get('/lecturer/register-units', function(req,res){res.render('cla', {title: 'Units'})})
 
 router.get('/session', function(req,res){res.render('session', {title: 'Class'})})
-
 
 // student's route
 router.get('/student', function(req,res){res.render('index', {title: 'Welcome student'})})
 
-router.post ('/account', function (req, res) {
+router.post ('/account',[
+    
+    body('email')
+    .isEmail()
+    .normalizeEmail(),
+
+    body('user_id')
+    .not().isEmpty().withMessage('This field cannot be empty')
+    .trim()
+    .escape(),
+    sanitizeBody('notifyOnReply').toBoolean(),
+
+    // password must contain 8 characters and at least a number
+    body('password')
+    .isLength({
+        min: 8
+    }).withMessage('must be at least 8 chars long')
+    .matches(/\d/).withMessage('must contain a number'),
+
+    // checking if passwordConfirmation matches password
+    body('passwordConfirmation')
+    .custom((value, { req }) => value === req.body.password).withMessage('password confirmation does not match password')
+], function (req, res) {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(422).json({
@@ -34,18 +56,40 @@ router.post ('/account', function (req, res) {
             user_id: req.body.user_id,
             email: req.body.email,
             password: req.body.password,
-            confirm_password: req.body.confirm_password,
+            confirm_password: req.body.confirm_password
         };
-        // newUser.save(newUser, function (err, User) {
-        //     res.send(User)
-        //     if (err) {
-        //         console.log(err);
-                
-        //     }
-        //     res.redirect('/account')
-        // })
+        User.create(newUser, function (err, user) {
+            if (err) {
+                console.log(err);                
+            }
+            user.save((err) => {
+                return res.redirect('/account');
+             });
+        })
         console.log(newUser);  
     }
+})
 
+router.post ('/account', function (req, res) {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(422).json({
+            errors: errors.array()
+        });
+    } else {
+        let newUnit = {
+            code: req.body.code,
+            name: req.body.name,
+        };
+        Unit.create(newUnit, function (err, unit) {
+            if (err) {
+                console.log(err);                
+            }
+            unit.save((err) => {
+                return res.redirect('/account');
+                });
+        })
+        console.log(newUser);  
+    }
 })
 module.exports = router

@@ -1,8 +1,8 @@
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
-let usersSchema = new Schema({
-    user_Id: String , 
+const usersSchema = new Schema({
+    user_id: String, 
     email: String, 
     password: String, 
     confirm_password: String
