@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const mongoose =require('mongoose')
 
 const routes = require('./routes/index')
 
@@ -18,9 +19,20 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', routes)
 
+//connecting to database
+mongoose.connect('mongodb+srv://Paula:rerimoi@das-ahzne.gcp.mongodb.net/DAS').DAS;
+
+// app.post("/account", (req, res) => {res.render('account',{title: 'Login page'})
+//   res.send("item saved to database");
+// });
+  
+  
+
+ 
+  
+  
+
 app.listen(PORT, function(){
     console.log('listening to port' + PORT);
 });
-
-
 

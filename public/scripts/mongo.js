@@ -8,11 +8,4 @@ const usersSchema = new Schema({
     confirm_password: String
   });
 
-const unitssSchema = new Schema({
-  code : String, 
-  name: String, 
-});
-
-module.exports =  mongoose.model('User', usersSchema);
-
-  
+ module.exports =  mongoose.model('Users', usersSchema)
